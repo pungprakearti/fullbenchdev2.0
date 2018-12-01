@@ -1,0 +1,151 @@
+@import './_config.scss';
+
+// .Section-lilTanks {
+//   display: block;
+//   position: absolute;
+//   top: 0;
+//   left: $sideBarW;
+//   margin: 5px;
+//   width: $lilTanksW;
+//   height: $lilTanksH;
+//   border: 1px solid $primaryLines;
+// }
+
+// .Section-algorithms {
+//   position: absolute;
+//   top: 0;
+//   left: $algorithmHPos;
+//   margin: 5px;
+//   width: $lilTanksW;
+//   height: $algorithmH;
+//   border: 1px solid $primaryLines;
+// }
+
+// .Section-welcome {
+//   position: absolute;
+//   top: $welcomeHPos;
+//   left: $algorithmHPos;
+//   margin: 5px;
+//   width: $lilTanksW;
+//   height: $welcomeH;
+//   border: 1px solid $primaryLines;
+// }
+
+// .Section-spiral {
+//   position: absolute;
+//   top: 0;
+//   left: $spiralHPos;
+//   margin: 5px;
+//   width: $lilTanksW;
+//   border: 1px solid $primaryLines;
+//   height: $spiralH;
+// }
+
+.Section-redux {
+  width: 150px;
+  height: 150px;
+  border: 1px solid $primaryLines;
+}
+
+.Section-python {
+  position: absolute;
+  top: 0;
+  left: 157px;
+  width: 200px;
+  height: 150px;
+  border: 1px solid $primaryLines;
+}
+
+.Section-gatsby {
+  position: absolute;
+  top: 0;
+  left: calc(159px + 205px);
+  width: calc(100% - 150px - 200px - 16px);
+  height: 100px;
+  border: 1px solid $primaryLines;
+}
+
+.Section-react {
+  // display: block;
+  margin-top: 5px;
+  width: 175px;
+  height: 150px;
+  border: 1px solid $primaryLines;
+}
+
+.Section-graphql {
+  position: absolute;
+  top: 157px;
+  left: 182px;
+  width: 175px;
+  height: 60px;
+  border: 1px solid $primaryLines;
+}
+
+.Section-fullstack {
+  position: absolute;
+  top: calc(157px + 66px);
+  left: 182px;
+  width: 130px;
+  height: 84px;
+  border: 1px solid $primaryLines;
+}
+
+.Section-css {
+  position: absolute;
+  top: 107px;
+  left: calc(181px + 183px);
+  width: 108px;
+  height: 110px;
+  border: 1px solid $primaryLines;
+}
+
+.Section-express {
+  margin-top: 5px;
+  width: 140px;
+  height: 180px;
+  border: 1px solid $primaryLines;
+}
+
+.Section-psql {
+  position: absolute;
+  top: 314px;
+  left: 147px;
+  width: 165px;
+  height: 120px;
+  border: 1px solid $primaryLines;
+}
+
+.Section-javascript {
+  position: absolute;
+  top: 223px;
+  left: calc(147px + 172px);
+  width: 153px;
+  height: calc(84px + 120px + 7px);
+  border: 1px solid $primaryLines;
+}
+
+.Section-jquery {
+  margin-top: 5px;
+  width: 140px;
+  height: 80px;
+  border: 1px solid $primaryLines;
+}
+
+.Section-flask {
+  position: absolute;
+  top: calc(314px + 127px);
+  left: 147px;
+  width: 200px;
+  height: 140px;
+  border: 1px solid $primaryLines;
+}
+
+.Section-jsx {
+  position: absolute;
+  top: calc(314px + 127px);
+  left: calc(147px + 207px);
+  width: 118px;
+  height: 140px;
+  border: 1px solid $primaryLines;
+}

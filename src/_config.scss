@@ -7,3 +7,22 @@ $secondaryBG: darkblue;
 $transparent: rgba(0, 0, 0, 0);
 $lessTrans: rgba(100, 100, 100, 0.5);
 $buttonHover: lightgray;
+
+//dimensions
+$homeContW: 800px;
+$homeMainContH: calc(100vh - 75px);
+$sideBarW: 260px;
+$contentWindowW: 255px;
+$contentWindowH: calc(100vh - 227px - 5px - 5px - 70px);
+$gameBoardHPos: calc(255px + 10px + 2px);
+$gameBoardW: calc(800px - 40px - 255px - 10px - 10px - 1px);
+$gameBoardH: calc(100vh - 75px - 10px);
+
+$lilTanksW: calc((100vw - 260px - 40px - 25px) / 3);
+$lilTanksH: calc((250px) / 2);
+$algorithmH: calc((250px) / 4);
+$algorithmHPos: calc(260px + ((100vw - 260px - 40px - 25px) / 3) + 5px);
+$spiralH: calc((250px) / 2);
+$spiralHPos: calc(260px + (((100vw - 260px - 40px - 25px) / 3) * 2) + 10px);
+$welcomeH: calc(((250px) / 4) - 5px);
+$welcomeHPos: calc(((250px) / 4) + 5px);

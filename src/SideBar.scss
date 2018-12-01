@@ -1,108 +1,18 @@
 @import './_config.scss';
 
+.SideBar-border {
+  margin: 5px;
+  width: 250px;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid $primaryLines;
+}
+
 .SideBar-cont {
-  position: relative;
-  /* border: 1px solid red; */
-  width: 245px;
-  height: 240px;
-  margin: 25px 25px;
-}
-
-.SideBar-primary-cont {
-  /* border: 1px solid green; */
-  width: 125px;
-  height: 100%;
-}
-
-.SideBar-secondary-cont {
-  display: inline;
-  position: absolute;
-  top: 0px;
-  left: 125px;
-  /* border: 1px solid blue; */
-}
-
-.SideBar-button > .primary {
-  color: $primaryText;
-}
-
-.secondary {
-  background-color: $lessTrans;
-}
-
-.SideBar-button-lilTanks {
-  opacity: 0;
-  animation: SideBar-lilTanks-Drop 0.5s ease;
-  margin-top: 35px;
-  opacity: 1;
-}
-
-.SideBar-button-DITL,
-.SideBar-button-IMDB {
-  opacity: 0;
-  animation: SideBar-opacity 0.5s ease;
-  opacity: 1;
-}
-
-.SideBar-button-jobly {
-  opacity: 0;
-  animation: SideBar-jobly-Drop 0.65s ease;
-  margin-top: 105px;
-  opacity: 1;
-}
-
-.SideBar-button-floodFill {
-  opacity: 0px;
-  animation: SideBar-floodFill-Drop 0.75s ease;
-  margin-top: 140px;
-  opacity: 1;
-}
-
-.SideBar-button-spiral,
-.SideBar-button-leveret {
-  opacity: 0px;
-  animation: SideBar-opacity 0.75s ease;
-  opacity: 1;
-}
-
-@keyframes SideBar-lilTanks-Drop {
-  from {
-    opacity: 0;
-    margin-top: 0px;
-  }
-  to {
-    margin-top: 35px;
-    opacity: 1;
-  }
-}
-
-@keyframes SideBar-jobly-Drop {
-  from {
-    opacity: 0;
-    margin-top: 0px;
-  }
-  to {
-    margin-top: 105px;
-    opacity: 1;
-  }
-}
-
-@keyframes SideBar-floodFill-Drop {
-  from {
-    opacity: 0;
-    margin-top: 0px;
-  }
-  to {
-    margin-top: 140px;
-    opacity: 1;
-  }
-}
-
-@keyframes SideBar-opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 250px;
+  height: 205px;
 }

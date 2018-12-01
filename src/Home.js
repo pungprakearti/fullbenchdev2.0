@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import SideBar from './SideBar';
+import Section from './Section';
+import ContentWindow from './ContentWindow';
+
 import './Home.scss';
 
 export default class Home extends Component {
@@ -22,12 +25,37 @@ export default class Home extends Component {
       <React.Fragment>
         <div className="Home-cont">
           <div className="Home-header-cont">
-            <div className="Home-name">Andrew Pungprakearti</div>
-            <div className="Home-title">developer</div>
+            <div className="Home-left">
+              <div className="Home-name">Andrew Pungprakearti</div>
+              <div className="Home-title">developer</div>
+            </div>
             <div className="Home-hostname">{window.location.hostname}</div>
           </div>
           <div className="Home-main-cont">
             <SideBar showSection={this.showSection} />
+            {/* <Section name="lilTanks" />
+            <Section name="algorithms" />
+            <Section name="spiral" />
+            <Section name="welcome" /> */}
+            <ContentWindow />
+            <div className="Home-game-board-cont">
+              <div className="Home-game-board">
+                <Section name="redux" />
+                <Section name="python" />
+                <Section name="gatsby" />
+                <Section name="react" />
+                <Section name="graphql" />
+                <Section name="fullstack" />
+                <Section name="css" />
+                <Section name="express" />
+                <Section name="psql" />
+                <Section name="javascript" />
+                <Section name="jquery" />
+                <Section name="flask" />
+                <Section name="jsx" />
+                <div className="Home-game-board-stats">stats go here</div>
+              </div>
+            </div>
           </div>
         </div>
       </React.Fragment>

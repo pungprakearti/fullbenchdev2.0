@@ -1,0 +1,8 @@
+@import './_config.scss';
+
+.ContentWindow-cont {
+  border: 1px solid $primaryLines;
+  width: $contentWindowW;
+  height: $contentWindowH;
+  margin: 5px;
+}

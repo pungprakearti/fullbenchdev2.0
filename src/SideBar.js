@@ -34,16 +34,34 @@ export default class SideBar extends Component {
     { name: 'DITL', pos: 'secondary', val: 'day in the life' },
     { name: 'IMDB', pos: 'secondary', val: 'motion pictures' },
     { name: 'resume', pos: 'primary', val: 'resumé' },
-    { name: 'projects', pos: 'primary', val: 'projects' },
-    // { name: 'lipslut', pos: 'secondary', val: 'Lipslut' },
+    // { name: 'projects', pos: 'primary', val: 'projects' },
+    { name: 'lipslut', pos: 'secondary', val: 'Lipslut' },
     { name: 'jobly', pos: 'secondary', val: 'jobly' },
-    { name: 'algorithms', pos: 'primary', val: 'algorithms' },
+    // { name: 'algorithms', pos: 'primary', val: 'algorithms' },
     { name: 'floodFill', pos: 'secondary', val: 'flood fill' },
     { name: 'spiral', pos: 'secondary', val: 'spiral' },
     { name: 'leveret', pos: 'secondary', val: 'leveret' },
-    { name: 'connect', pos: 'primary', val: 'connect' },
+    // { name: 'connect', pos: 'primary', val: 'connect' },
     { name: 'contact', pos: 'primary', val: 'contact' }
   ];
+
+  // sideBarBtns = [
+  //   { name: 'welcome', pos: 'primary', val: 'welcome' },
+  //   { name: 'aboutMe', pos: 'primary', val: 'about me' },
+  //   { name: 'lilTanks', pos: 'secondary', val: 'Lil Tanks' },
+  //   { name: 'DITL', pos: 'secondary', val: 'day in the life' },
+  //   { name: 'IMDB', pos: 'secondary', val: 'motion pictures' },
+  //   { name: 'resume', pos: 'primary', val: 'resumé' },
+  //   { name: 'projects', pos: 'primary', val: 'projects' },
+  //   { name: 'lipslut', pos: 'secondary', val: 'Lipslut' },
+  //   { name: 'jobly', pos: 'secondary', val: 'jobly' },
+  //   { name: 'algorithms', pos: 'primary', val: 'algorithms' },
+  //   { name: 'floodFill', pos: 'secondary', val: 'flood fill' },
+  //   { name: 'spiral', pos: 'secondary', val: 'spiral' },
+  //   { name: 'leveret', pos: 'secondary', val: 'leveret' },
+  //   { name: 'connect', pos: 'primary', val: 'connect' },
+  //   { name: 'contact', pos: 'primary', val: 'contact' }
+  // ];
 
   /** show and hide secondary sections on click */
   handleClick(evt) {
@@ -137,11 +155,9 @@ export default class SideBar extends Component {
     });
 
     return (
-      <div className="SideBar-cont">
-        {/*
-        Primary column */}
-        <div className="SideBar-primary-cont">
-          {primaryBtns.map(btn => (
+      <div className="SideBar-border">
+        <div className="SideBar-cont">
+          {this.sideBarBtns.map(btn => (
             <button
               className={`SideBar-button-${btn.name} SideBar-button ${btn.pos}`}
               onClick={this.handleClick}
@@ -151,20 +167,37 @@ export default class SideBar extends Component {
               {btn.val}
             </button>
           ))}
-        </div>
 
-        {/* secondary column */}
-        <div className="SideBar-secondary-cont">
-          {secondaryBtns.map(btn => (
-            <button
-              className={`SideBar-button-${btn.name} SideBar-button ${btn.pos}`}
-              onClick={this.handleClick}
-              name={btn.name}
-              key={btn.name}
-            >
-              {btn.val}
-            </button>
-          ))}
+          {/* <div className="SideBar-primary-cont">
+            {primaryBtns.map(btn => (
+              <button
+                className={`SideBar-button-${btn.name} SideBar-button ${
+                  btn.pos
+                }`}
+                onClick={this.handleClick}
+                name={btn.name}
+                key={btn.name}
+              >
+                {btn.val}
+              </button>
+            ))}
+          </div>
+
+          
+          <div className="SideBar-secondary-cont">
+            {secondaryBtns.map(btn => (
+              <button
+                className={`SideBar-button-${btn.name} SideBar-button ${
+                  btn.pos
+                }`}
+                onClick={this.handleClick}
+                name={btn.name}
+                key={btn.name}
+              >
+                {btn.val}
+              </button>
+            ))}
+          </div> */}
         </div>
       </div>
     );
