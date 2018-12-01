@@ -1,47 +1,7 @@
 @import './_config.scss';
 
-// .Section-lilTanks {
-//   display: block;
-//   position: absolute;
-//   top: 0;
-//   left: $sideBarW;
-//   margin: 5px;
-//   width: $lilTanksW;
-//   height: $lilTanksH;
-//   border: 1px solid $primaryLines;
-// }
-
-// .Section-algorithms {
-//   position: absolute;
-//   top: 0;
-//   left: $algorithmHPos;
-//   margin: 5px;
-//   width: $lilTanksW;
-//   height: $algorithmH;
-//   border: 1px solid $primaryLines;
-// }
-
-// .Section-welcome {
-//   position: absolute;
-//   top: $welcomeHPos;
-//   left: $algorithmHPos;
-//   margin: 5px;
-//   width: $lilTanksW;
-//   height: $welcomeH;
-//   border: 1px solid $primaryLines;
-// }
-
-// .Section-spiral {
-//   position: absolute;
-//   top: 0;
-//   left: $spiralHPos;
-//   margin: 5px;
-//   width: $lilTanksW;
-//   border: 1px solid $primaryLines;
-//   height: $spiralH;
-// }
-
 .Section-redux {
+  position: absolute;
   width: 150px;
   height: 150px;
   border: 1px solid $primaryLines;
@@ -66,8 +26,8 @@
 }
 
 .Section-react {
-  // display: block;
-  margin-top: 5px;
+  position: absolute;
+  top: 157px;
   width: 175px;
   height: 150px;
   border: 1px solid $primaryLines;
@@ -101,7 +61,8 @@
 }
 
 .Section-express {
-  margin-top: 5px;
+  position: absolute;
+  top: 314px;
   width: 140px;
   height: 180px;
   border: 1px solid $primaryLines;
@@ -126,7 +87,8 @@
 }
 
 .Section-jquery {
-  margin-top: 5px;
+  position: absolute;
+  top: 501px;
   width: 140px;
   height: 80px;
   border: 1px solid $primaryLines;
@@ -148,4 +110,51 @@
   width: 118px;
   height: 140px;
   border: 1px solid $primaryLines;
+}
+
+.Section-bar {
+  background-color: $lessTrans;
+  height: 100%;
+  width: 0%;
+  transition: all 0.1s linear;
+  z-index: -5;
+}
+
+.Section-fee {
+  position: absolute;
+  bottom: 3px;
+  left: 5px;
+}
+
+.Section-reward {
+  position: absolute;
+  bottom: 3px;
+  right: 5px;
+}
+
+.Section-bar30 {
+  width: 30%;
+}
+
+.Section-bar60 {
+  width: 60%;
+}
+
+.Section-bar100 {
+  width: 100%;
+}
+
+.Section-title {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: 0;
+  right: 0;
+}
+
+.Section-css > .Section-body > .Section-title {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: 8px;
+  right: 0;
+  transform: rotate(4deg);
 }

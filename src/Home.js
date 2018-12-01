@@ -33,10 +33,6 @@ export default class Home extends Component {
           </div>
           <div className="Home-main-cont">
             <SideBar showSection={this.showSection} />
-            {/* <Section name="lilTanks" />
-            <Section name="algorithms" />
-            <Section name="spiral" />
-            <Section name="welcome" /> */}
             <ContentWindow />
             <div className="Home-game-board-cont">
               <div className="Home-game-board">
