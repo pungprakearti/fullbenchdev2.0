@@ -65,78 +65,80 @@ export default class SideBar extends Component {
 
   /** show and hide secondary sections on click */
   handleClick(evt) {
+    console.log(evt.target.name);
     this.props.showSection(evt.target.name);
+    this.props.showContent(evt.target.name);
 
-    switch (evt.target.name) {
-      //
-      case 'welcome':
-        this.setState({ hidden: this.hidden });
-        return;
+    // switch (evt.target.name) {
+    //   //
+    //   case 'welcome':
+    //     this.setState({ hidden: this.hidden });
+    //     return;
 
-      case 'aboutMe':
-        //
-        //show Lil Tanks and DITL
-        if (this.state.hidden.indexOf('lilTanks') !== -1) {
-          let newState = { hidden: this.hidden };
-          newState = newState.hidden.filter(
-            btn => btn !== 'lilTanks' && btn !== 'DITL' && btn !== 'IMDB'
-          );
-          this.setState({ hidden: newState });
+    //   case 'aboutMe':
+    //     //
+    //     //show Lil Tanks and DITL
+    //     if (this.state.hidden.indexOf('lilTanks') !== -1) {
+    //       let newState = { hidden: this.hidden };
+    //       newState = newState.hidden.filter(
+    //         btn => btn !== 'lilTanks' && btn !== 'DITL' && btn !== 'IMDB'
+    //       );
+    //       this.setState({ hidden: newState });
 
-          //hide all
-        } else {
-          this.setState({ hidden: this.hidden });
-        }
-        return;
+    //       //hide all
+    //     } else {
+    //       this.setState({ hidden: this.hidden });
+    //     }
+    //     return;
 
-      case 'resume':
-        this.setState({ hidden: this.hidden });
+    //   case 'resume':
+    //     this.setState({ hidden: this.hidden });
 
-        return;
+    //     return;
 
-      case 'projects':
-        //
-        //show Jobly
-        if (this.state.hidden.indexOf('jobly') !== -1) {
-          let newState = { hidden: this.hidden };
-          newState = newState.hidden.filter(btn => btn !== 'jobly');
-          this.setState({ hidden: newState });
+    //   case 'projects':
+    //     //
+    //     //show Jobly
+    //     if (this.state.hidden.indexOf('jobly') !== -1) {
+    //       let newState = { hidden: this.hidden };
+    //       newState = newState.hidden.filter(btn => btn !== 'jobly');
+    //       this.setState({ hidden: newState });
 
-          //hide all
-        } else {
-          this.setState({ hidden: this.hidden });
-        }
-        return;
+    //       //hide all
+    //     } else {
+    //       this.setState({ hidden: this.hidden });
+    //     }
+    //     return;
 
-      case 'algorithms':
-        //
-        //show flood fill, spiral, and leveret
-        if (this.state.hidden.indexOf('floodFill') !== -1) {
-          let newState = { hidden: this.hidden };
-          newState = newState.hidden.filter(
-            btn => btn !== 'floodFill' && btn !== 'spiral' && btn !== 'leveret'
-          );
-          this.setState({ hidden: newState });
+    //   case 'algorithms':
+    //     //
+    //     //show flood fill, spiral, and leveret
+    //     if (this.state.hidden.indexOf('floodFill') !== -1) {
+    //       let newState = { hidden: this.hidden };
+    //       newState = newState.hidden.filter(
+    //         btn => btn !== 'floodFill' && btn !== 'spiral' && btn !== 'leveret'
+    //       );
+    //       this.setState({ hidden: newState });
 
-          //hide all
-        } else {
-          this.setState({ hidden: this.hidden });
-        }
-        return;
+    //       //hide all
+    //     } else {
+    //       this.setState({ hidden: this.hidden });
+    //     }
+    //     return;
 
-      case 'connect':
-        this.setState({ hidden: this.hidden });
+    //   case 'connect':
+    //     this.setState({ hidden: this.hidden });
 
-        return;
+    //     return;
 
-      case 'contact':
-        this.setState({ hidden: this.hidden });
+    //   case 'contact':
+    //     this.setState({ hidden: this.hidden });
 
-        return;
+    //     return;
 
-      default:
-        return;
-    }
+    //   default:
+    //     return;
+    // }
   }
 
   render() {
@@ -167,37 +169,6 @@ export default class SideBar extends Component {
               {btn.val}
             </button>
           ))}
-
-          {/* <div className="SideBar-primary-cont">
-            {primaryBtns.map(btn => (
-              <button
-                className={`SideBar-button-${btn.name} SideBar-button ${
-                  btn.pos
-                }`}
-                onClick={this.handleClick}
-                name={btn.name}
-                key={btn.name}
-              >
-                {btn.val}
-              </button>
-            ))}
-          </div>
-
-          
-          <div className="SideBar-secondary-cont">
-            {secondaryBtns.map(btn => (
-              <button
-                className={`SideBar-button-${btn.name} SideBar-button ${
-                  btn.pos
-                }`}
-                onClick={this.handleClick}
-                name={btn.name}
-                key={btn.name}
-              >
-                {btn.val}
-              </button>
-            ))}
-          </div> */}
         </div>
       </div>
     );

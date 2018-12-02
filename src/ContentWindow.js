@@ -3,6 +3,6 @@ import './ContentWindow.scss';
 
 export default class ContentWindow extends Component {
   render() {
-    return <div className="ContentWindow-cont">Content goes here</div>;
+    return <div className="ContentWindow-cont">{this.props.content}</div>;
   }
 }

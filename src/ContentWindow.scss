@@ -5,4 +5,18 @@
   width: $contentWindowW;
   height: $contentWindowH;
   margin: 5px;
+  overflow-y: auto;
+}
+
+.content-cont {
+  border: 1px solid $primaryLines;
+  margin: 5px;
+  padding: 10px;
+  text-align: left;
+  text-indent: 25px;
+}
+
+.content-img {
+  margin-top: 25px;
+  width: 100%;
 }

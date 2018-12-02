@@ -37,3 +37,14 @@ button:hover {
 button:focus {
   outline: 0;
 }
+
+a {
+  font-size: 14px;
+  text-decoration: none;
+  color: $primaryLink;
+  text-transform: uppercase;
+}
+
+a:hover {
+  color: $primaryLinkHover;
+}
