@@ -1,5 +1,12 @@
 @import './_config.scss';
 
+.Gem-green,
+.Gem-blue,
+.Gem-purple,
+.Gem-orange {
+  margin-left: 5px;
+}
+
 .Gem-green {
   color: $gemGreen;
 }
@@ -14,4 +21,48 @@
 
 .Gem-orange {
   color: $gemOrange;
+}
+
+.Gem-cont {
+  display: inline;
+}
+
+.Gem-circle-green {
+  position: absolute;
+  bottom: 1px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border: $gemCircleGreen;
+  border-radius: 20px;
+}
+
+.Gem-circle-blue {
+  position: absolute;
+  bottom: 1px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border: $gemCircleBlue;
+  border-radius: 20px;
+}
+
+.Gem-circle-purple {
+  position: absolute;
+  bottom: 1px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border: $gemCirclePurple;
+  border-radius: 20px;
+}
+
+.Gem-circle-orange {
+  position: absolute;
+  bottom: 1px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border: $gemCircleOrange;
+  border-radius: 20px;
 }

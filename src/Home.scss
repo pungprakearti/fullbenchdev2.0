@@ -43,14 +43,14 @@
   left: $gameBoardHPos;
   width: $gameBoardW;
   height: $gameBoardH;
-  border: 1px solid $primaryLines;
+  border: 1px solid $secondaryLines;
 }
 
 .Home-game-board {
   position: relative;
   margin: 5px;
   height: calc(100% - 11px);
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .Home-game-board-stats {

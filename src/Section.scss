@@ -1,121 +1,139 @@
 @import './_config.scss';
 
-.Section-redux {
+.Section-cont {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.Section-redux,
+.Section-python,
+.Section-gatsby,
+.Section-react,
+.Section-graphql,
+.Section-fullstack,
+.Section-css,
+.Section-express,
+.Section-psql,
+.Section-javascript,
+.Section-jquery,
+.Section-flask,
+.Section-jsx {
   position: absolute;
+  border: 1px solid $primaryLines;
+  transition: all 0.25s ease;
+}
+
+.Section-redux:hover,
+.Section-python:hover,
+.Section-gatsby:hover,
+.Section-react:hover,
+.Section-graphql:hover,
+.Section-fullstack:hover,
+.Section-css:hover,
+.Section-express:hover,
+.Section-psql:hover,
+.Section-javascript:hover,
+.Section-jquery:hover,
+.Section-flask:hover,
+.Section-jsx:hover {
+  position: absolute;
+  border: 1px solid white;
+  background-color: $accessableSection;
+}
+
+.Section-redux {
   width: 150px;
   height: 150px;
-  border: 1px solid $primaryLines;
 }
 
 .Section-python {
-  position: absolute;
   top: 0;
   left: 157px;
   width: 200px;
   height: 150px;
-  border: 1px solid $primaryLines;
 }
 
 .Section-gatsby {
-  position: absolute;
   top: 0;
   left: calc(159px + 205px);
   width: calc(100% - 150px - 200px - 16px);
   height: 100px;
-  border: 1px solid $primaryLines;
 }
 
 .Section-react {
-  position: absolute;
   top: 157px;
   width: 175px;
   height: 150px;
-  border: 1px solid $primaryLines;
 }
 
 .Section-graphql {
-  position: absolute;
   top: 157px;
   left: 182px;
   width: 175px;
   height: 60px;
-  border: 1px solid $primaryLines;
 }
 
 .Section-fullstack {
-  position: absolute;
   top: calc(157px + 66px);
   left: 182px;
   width: 130px;
   height: 84px;
-  opacity: 0;
-  transition: all 5s linear;
-  border: 1px solid $primaryLines;
-}
-
-.Section-fadeOn {
-  opacity: 1;
+  animation: fadeIn 3s linear;
 }
 
 .Section-css {
-  position: absolute;
   top: 107px;
   left: calc(181px + 183px);
   width: 108px;
   height: 110px;
-  border: 1px solid $primaryLines;
 }
 
 .Section-express {
-  position: absolute;
   top: 314px;
   width: 140px;
   height: 180px;
-  border: 1px solid $primaryLines;
 }
 
 .Section-psql {
-  position: absolute;
   top: 314px;
   left: 147px;
   width: 165px;
   height: 120px;
-  border: 1px solid $primaryLines;
 }
 
 .Section-javascript {
-  position: absolute;
   top: 223px;
   left: calc(147px + 172px);
   width: 153px;
   height: calc(84px + 120px + 7px);
-  border: 1px solid $primaryLines;
 }
 
 .Section-jquery {
-  position: absolute;
   top: 501px;
   width: 140px;
   height: 80px;
-  border: 1px solid $primaryLines;
 }
 
 .Section-flask {
-  position: absolute;
   top: calc(314px + 127px);
   left: 147px;
   width: 200px;
   height: 140px;
-  border: 1px solid $primaryLines;
 }
 
 .Section-jsx {
-  position: absolute;
   top: calc(314px + 127px);
   left: calc(147px + 207px);
   width: 118px;
   height: 140px;
-  border: 1px solid $primaryLines;
 }
 
 .Section-bar {
@@ -130,6 +148,15 @@
   position: absolute;
   bottom: 3px;
   left: 5px;
+  color: rgb(68, 68, 68);
+}
+
+.Section-fee-num {
+  position: absolute;
+  bottom: 3px;
+  left: 5px;
+  z-index: 1;
+  color: $gemGreen;
 }
 
 .Section-reward {
@@ -155,6 +182,7 @@
   top: calc(50% - 12px);
   left: 0;
   right: 0;
+  user-select: none;
 }
 
 .Section-css > .Section-body > .Section-title {

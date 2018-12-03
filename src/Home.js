@@ -24,38 +24,85 @@ export default class Home extends Component {
     super(props);
     this.state = {
       sections: [],
-      content: ''
+      content: '',
+      fees: {
+        //feeSection:[green, blue, purple, orange]
+        javascript: [0, 0, 0, 0],
+        python: [0, 0, 0, 0],
+        css: [0, 0, 0, 0],
+        jquery: [0, 0, 0, 0],
+        flask: [0, 0, 0, 0],
+        psql: [0, 0, 0, 0],
+        express: [0, 0, 0, 0],
+        react: [0, 0, 0, 0],
+        redux: [0, 0, 0, 0],
+        jsx: [0, 0, 0, 0],
+        gatsby: [0, 0, 0, 0],
+        graphql: [0, 0, 0, 0],
+        fullstack: [0, 0, 0, 0]
+      }
     };
 
     this.linkBtntoSec = {
       welcome: <Section name="javascript" reward={<Gem color="green" />} />,
-      aboutMe: <Section name="python" reward={<Gem color="green" />} />,
-      lilTanks: <Section name="css" reward={<Gem color="green" />} />,
+      aboutMe: (
+        <Section
+          name="python"
+          reward={
+            <React.Fragment>
+              <Gem color="green" />
+              <Gem color="green" />
+            </React.Fragment>
+          }
+        />
+      ),
+      lilTanks: (
+        <Section name="css" reward={<Gem color="green" auto={true} />} />
+      ),
       DITL: <Section name="jquery" reward={<Gem color="blue" />} />,
-      IMDB: <Section name="flask" reward={<Gem color="blue" />} />,
-      resume: <Section name="psql" reward={<Gem color="blue" />} />,
+      IMDB: (
+        <Section
+          name="flask"
+          reward={
+            <React.Fragment>
+              <Gem color="blue" />
+              <Gem color="blue" />
+            </React.Fragment>
+          }
+        />
+      ),
+      resume: <Section name="psql" reward={<Gem color="blue" auto={true} />} />,
       lipslut: <Section name="express" reward={<Gem color="purple" />} />,
-      jobly: <Section name="react" reward={<Gem color="purple" />} />,
-      floodFill: <Section name="redux" reward={<Gem color="purple" />} />,
+      jobly: (
+        <Section
+          name="react"
+          reward={
+            <React.Fragment>
+              <Gem color="purple" />
+              <Gem color="purple" />
+            </React.Fragment>
+          }
+        />
+      ),
+      floodFill: (
+        <Section name="redux" reward={<Gem color="purple" auto={true} />} />
+      ),
       spiral: <Section name="jsx" reward={<Gem color="orange" />} />,
-      leveret: <Section name="gatsby" reward={<Gem color="orange" />} />,
-      contact: <Section name="graphql" reward={<Gem color="orange" />} />
+      leveret: (
+        <Section
+          name="gatsby"
+          reward={
+            <React.Fragment>
+              <Gem color="orange" />
+              <Gem color="orange" />
+            </React.Fragment>
+          }
+        />
+      ),
+      contact: (
+        <Section name="graphql" reward={<Gem color="orange" auto={true} />} />
+      )
     };
-    /*
-    welcome - javascript
-    aboutMe - python
-    lilTanks - css
-    DITL - jquery
-    IMDB - flask
-    resume - psql
-    lipslut - express
-    jobly - react
-    floodFill - redux
-    spiral jsx
-    leveret - gatsby
-    contact - graphql
-    fullstack
-    */
     this.showSection = this.showSection.bind(this);
     this.showContent = this.showContent.bind(this);
   }
@@ -64,9 +111,9 @@ export default class Home extends Component {
     if (this.state.sections.indexOf(section) === -1) {
       this.setState({ sections: [...this.state.sections, section] });
     }
-    console.log('getting here: ', this.state.sections);
   }
 
+  //change this into an object to keep it consistent with the rest of the code.
   showContent(contentName) {
     switch (contentName) {
       case 'welcome':

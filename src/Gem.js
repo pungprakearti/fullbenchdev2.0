@@ -4,6 +4,16 @@ import './Gem.scss';
 
 export default class Gem extends Component {
   render() {
-    return <FaGem className={`Gem-${this.props.color}`} />;
+    console.log(this.props.name, this.props);
+    return (
+      <div className="Gem-cont">
+        <FaGem className={`Gem-${this.props.color}`} />
+        {this.props.auto ? (
+          <div className={`Gem-circle-${this.props.color}`} />
+        ) : (
+          ''
+        )}
+      </div>
+    );
   }
 }

@@ -1,18 +1,24 @@
 $primaryText: white;
 $primaryLines: gray;
 $secondaryText: lightgray;
-$secondarytLines: lightgray;
-$primaryBG: black;
+$secondaryLines: rgb(71, 71, 71);
+$primaryBG: rgb(16, 16, 24);
 $secondaryBG: darkblue;
 $transparent: rgba(0, 0, 0, 0);
 $lessTrans: rgba(100, 100, 100, 0.5);
 $buttonHover: lightgray;
 $primaryLink: skyblue;
 $primaryLinkHover: rgb(199, 239, 255);
-$gemGreen: rgb(73, 138, 73);
-$gemBlue: skyblue;
-$gemPurple: rgb(122, 62, 122);
-$gemOrange: rgb(245, 204, 127);
+$gemGreen: rgb(35, 206, 35);
+$gemBlue: rgb(0, 140, 255);
+$gemPurple: rgb(192, 0, 192);
+$gemOrange: rgb(241, 163, 16);
+$blockedSection: rgba(255, 0, 0, 0.25);
+$accessableSection: rgba(255, 255, 255, 0.05);
+$gemCircleGreen: 1px solid rgb(35, 206, 35);
+$gemCircleBlue: 1px solid rgb(0, 140, 255);
+$gemCirclePurple: 1px solid rgb(192, 0, 192);
+$gemCircleOrange: 1px solid rgb(241, 163, 16);
 
 //dimensions
 $homeContW: 800px;

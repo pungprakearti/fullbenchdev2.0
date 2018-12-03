@@ -47,17 +47,13 @@ export default class Section extends Component {
         id={this.props.name}
         onClick={this.handleClick}
       >
-        {/* Fix fade in here. Doesn't seem to work */}
-        <div
-          className={`Section-${this.props.name} ${
-            this.props.name === 'fullstack' ? 'Section-fadeOn' : ''
-          }`}
-        >
+        <div className={`Section-${this.props.name}`}>
           <div className="Section-body">
             <div className="Section-title">{this.props.name}</div>
             <div className="Section-fee">
-              <FaLock style={{ color: 'lightgreen' }} />
+              <FaLock />
             </div>
+            <div className="Section-fee-num">5</div>
             <div className="Section-reward">
               {this.props.reward ? (
                 this.props.reward
