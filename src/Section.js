@@ -53,7 +53,7 @@ export default class Section extends Component {
             <div className="Section-fee">
               <FaLock />
             </div>
-            <div className="Section-fee-num">5</div>
+            <div className="Section-fee-num">5, 5, 5, 5</div>
             <div className="Section-reward">
               {this.props.reward ? (
                 this.props.reward

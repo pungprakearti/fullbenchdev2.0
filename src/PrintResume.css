@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Slabo+27px');
+
+body {
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  background-color: white;
+}
+
+.PrintResume-cont {
+  margin: 0 auto;
+  width: 850px;
+  height: 1100px;
+  background-color: white;
+}
+
+.PrintResume-top {
+  width: 100%;
+  height: 25px;
+  background-color: rgb(0, 0, 78);
+}
+
+.PrintResume-bottom {
+  margin-top: 7px;
+  width: 100%;
+  height: 25px;
+  background-color: rgb(0, 0, 78);
+}
+
+.PrintResume-header {
+  margin: 20px;
+}
+
+.PrintResume-name {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-family: 'Slabo 27px', serif;
+  line-height: 40px;
+  color: tomato;
+  letter-spacing: 0.025em;
+}
+
+.PrintResume-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(0, 0, 78);
+  text-transform: uppercase;
+  margin-bottom: -20px;
+}
+
+.PrintResume-body-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.PrintResume-left,
+.PrintResume-right {
+  height: calc(1100px - 181px);
+  text-align: left;
+}
+
+.PrintResume-left {
+  width: 38%;
+  margin-left: 50px;
+}
+
+.PrintResume-middle {
+  margin-top: 19px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-left: 5px solid rgb(255, 52, 37);
+  height: calc(1100px - 245px);
+}
+
+.PrintResume-right {
+  width: 50%;
+  margin-right: 50px;
+}
+
+h3 {
+  font-family: 'Slabo 27px', serif;
+  text-align: center;
+  border-top: 5px solid rgb(255, 52, 37);
+  border-bottom: 5px solid rgb(255, 52, 37);
+  color: tomato;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.PrintResume-p {
+  margin-top: -5px;
+  text-indent: 50px;
+  margin-bottom: -5px;
+}
+
+.PrintResume-skills-cont {
+  margin-top: -20px;
+  margin-bottom: -25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h4 {
+  margin-bottom: 10px;
+  line-height: 0px;
+  color: rgb(0, 0, 78);
+}
+
+ul {
+  margin-top: 5px;
+  margin-bottom: 30px;
+  list-style: none;
+}
+
+li::before {
+  font-size: 30px;
+  line-height: 0px;
+  content: '• ';
+  color: tomato;
+}
+
+li {
+  margin-bottom: 5px;
+  margin-left: -25px;
+  text-indent: -0.7em;
+}
+
+.PrintResume-nimble,
+.PrintResume-pdi {
+  margin-top: 38px;
+}

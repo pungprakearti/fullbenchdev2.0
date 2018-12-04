@@ -43,66 +43,105 @@ export default class Home extends Component {
       }
     };
 
-    this.linkBtntoSec = {
-      welcome: <Section name="javascript" reward={<Gem color="green" />} />,
-      aboutMe: (
-        <Section
-          name="python"
-          reward={
-            <React.Fragment>
-              <Gem color="green" />
-              <Gem color="green" />
-            </React.Fragment>
-          }
-        />
-      ),
-      lilTanks: (
-        <Section name="css" reward={<Gem color="green" auto={true} />} />
-      ),
-      DITL: <Section name="jquery" reward={<Gem color="blue" />} />,
-      IMDB: (
-        <Section
-          name="flask"
-          reward={
-            <React.Fragment>
-              <Gem color="blue" />
-              <Gem color="blue" />
-            </React.Fragment>
-          }
-        />
-      ),
-      resume: <Section name="psql" reward={<Gem color="blue" auto={true} />} />,
-      lipslut: <Section name="express" reward={<Gem color="purple" />} />,
-      jobly: (
-        <Section
-          name="react"
-          reward={
-            <React.Fragment>
-              <Gem color="purple" />
-              <Gem color="purple" />
-            </React.Fragment>
-          }
-        />
-      ),
-      floodFill: (
-        <Section name="redux" reward={<Gem color="purple" auto={true} />} />
-      ),
-      spiral: <Section name="jsx" reward={<Gem color="orange" />} />,
-      leveret: (
-        <Section
-          name="gatsby"
-          reward={
-            <React.Fragment>
-              <Gem color="orange" />
-              <Gem color="orange" />
-            </React.Fragment>
-          }
-        />
-      ),
-      contact: (
-        <Section name="graphql" reward={<Gem color="orange" auto={true} />} />
-      )
+    this.mapButtons = {
+      welcome: {
+        content: <Welcome />,
+        section: <Section name="javascript" reward={<Gem color="green" />} />
+      },
+      aboutMe: {
+        content: <AboutMe />,
+        section: (
+          <Section
+            name="python"
+            reward={
+              <React.Fragment>
+                <Gem color="green" />
+                <Gem color="green" />
+              </React.Fragment>
+            }
+          />
+        )
+      },
+      lilTanks: {
+        content: <LilTanks />,
+        section: (
+          <Section name="css" reward={<Gem color="green" auto={true} />} />
+        )
+      },
+      DITL: {
+        content: <DITL />,
+        section: <Section name="jquery" reward={<Gem color="blue" />} />
+      },
+      IMDB: {
+        content: <IMDB />,
+        section: (
+          <Section
+            name="flask"
+            reward={
+              <React.Fragment>
+                <Gem color="blue" />
+                <Gem color="blue" />
+              </React.Fragment>
+            }
+          />
+        )
+      },
+      resume: {
+        content: <Resume />,
+        section: (
+          <Section name="psql" reward={<Gem color="blue" auto={true} />} />
+        )
+      },
+      lipslut: {
+        content: <Lipslut />,
+        section: <Section name="express" reward={<Gem color="purple" />} />
+      },
+      jobly: {
+        content: <Jobly />,
+        section: (
+          <Section
+            name="react"
+            reward={
+              <React.Fragment>
+                <Gem color="purple" />
+                <Gem color="purple" />
+              </React.Fragment>
+            }
+          />
+        )
+      },
+      floodFill: {
+        content: <FloodFill />,
+        section: (
+          <Section name="redux" reward={<Gem color="purple" auto={true} />} />
+        )
+      },
+      spiral: {
+        content: <Spiral />,
+        section: <Section name="jsx" reward={<Gem color="orange" />} />
+      },
+      leveret: {
+        content: <Leveret />,
+        section: (
+          <Section
+            name="gatsby"
+            reward={
+              <React.Fragment>
+                <Gem color="orange" />
+                <Gem color="orange" />
+              </React.Fragment>
+            }
+          />
+        )
+      },
+      contact: {
+        content: <Contact />,
+        section: (
+          <Section name="graphql" reward={<Gem color="orange" auto={true} />} />
+        )
+      }
     };
+
     this.showSection = this.showSection.bind(this);
     this.showContent = this.showContent.bind(this);
   }
@@ -113,60 +152,10 @@ export default class Home extends Component {
     }
   }
 
-  //change this into an object to keep it consistent with the rest of the code.
   showContent(contentName) {
-    switch (contentName) {
-      case 'welcome':
-        return this.setState({
-          content: <Welcome />
-        });
-      case 'aboutMe':
-        return this.setState({
-          content: <AboutMe />
-        });
-      case 'lilTanks':
-        return this.setState({
-          content: <LilTanks />
-        });
-      case 'DITL':
-        return this.setState({
-          content: <DITL />
-        });
-      case 'IMDB':
-        return this.setState({
-          content: <IMDB />
-        });
-      case 'resume':
-        return this.setState({
-          content: <Resume />
-        });
-      case 'lipslut':
-        return this.setState({
-          content: <Lipslut />
-        });
-      case 'jobly':
-        return this.setState({
-          content: <Jobly />
-        });
-      case 'floodFill':
-        return this.setState({
-          content: <FloodFill />
-        });
-      case 'spiral':
-        return this.setState({
-          content: <Spiral />
-        });
-      case 'leveret':
-        return this.setState({
-          content: <Leveret />
-        });
-      case 'contact':
-        return this.setState({
-          content: <Contact />
-        });
-      default:
-        return;
-    }
+    this.setState({
+      content: this.mapButtons[contentName].content
+    });
   }
 
   render() {
@@ -188,7 +177,10 @@ export default class Home extends Component {
             <ContentWindow content={this.state.content} />
             <div className="Home-game-board-cont">
               <div className="Home-game-board">
-                {this.state.sections.map(section => this.linkBtntoSec[section])}
+                {/* {this.state.sections.map(section => this.linkBtntoSec[section])} */}
+                {this.state.sections.map(
+                  section => this.mapButtons[section].section
+                )}
                 {this.state.sections.length === 12 ? (
                   <Section name="fullstack" />
                 ) : (
