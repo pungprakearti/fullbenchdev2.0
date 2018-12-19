@@ -15,8 +15,7 @@ body {
 
 .PrintResume-top {
   width: 100%;
-  height: 25px;
-  background-color: rgb(0, 0, 78);
+  height: 40px;
 }
 
 .PrintResume-bottom {
@@ -61,7 +60,7 @@ body {
 
 .PrintResume-left {
   width: 38%;
-  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .PrintResume-middle {
@@ -69,12 +68,13 @@ body {
   margin-left: 20px;
   margin-right: 20px;
   border-left: 5px solid rgb(255, 52, 37);
-  height: calc(1100px - 245px);
+  /* height: calc(1100px - 245px); */
+  height: calc(1100px - 249px);
 }
 
 .PrintResume-right {
   width: 50%;
-  margin-right: 50px;
+  margin-left: 50px;
 }
 
 h3 {
@@ -128,7 +128,38 @@ li {
   text-indent: -0.7em;
 }
 
+.PrintResume-faneron {
+  margin-top: 27px;
+}
+
 .PrintResume-nimble,
 .PrintResume-pdi {
   margin-top: 38px;
+}
+
+.PrintResume-projects-cont {
+  margin-top: -5px;
+}
+
+.PrintResume-lipslut {
+  margin-bottom: 0px;
+}
+
+.PrintResume-jobly {
+  margin-bottom: -5px;
+}
+
+.PrintResume-aau {
+  margin-bottom: -15px;
+}
+
+a,
+a:hover {
+  color: rgb(0, 0, 78);
+  font-weight: bold;
+  text-transform: none;
+}
+
+.PrintResume-contact {
+  margin-top: -10px;
 }

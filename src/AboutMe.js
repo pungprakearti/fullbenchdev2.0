@@ -4,7 +4,7 @@ import family from './family.jpg';
 export default class AboutMe extends Component {
   render() {
     return (
-      <div className="content-cont AboutMe-cont">
+      <div className="AboutMe-cont">
         <p>
           I'm half of Lead Money Games, an independent game development company.
           On June 15, 2016 we were funded through Kickstarter and on April 4,
